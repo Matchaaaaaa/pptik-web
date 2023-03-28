@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.transition{
+    transition: 0.4s all ease-in-out;
+}
+
+.kartu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+    gap: 40px;
+  }
+
+  .judul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .judul h1{
+    font-size: 40px;
+    text-align: left;
+    margin-left: 145px;
+    
+
+  }
+
+  .kartu-atas, .kartu-bawah {
+    display: flex;
+    gap: 40px;
+  }
+  
+
+  .kartu-bawah{
+    margin-bottom: 100px;
+  }
+
+  .kartu1, .kartu2, .kartu3, .kartu4{
+    width: 50%;
+    height: 272px;
+    background-color: #333333;
+    padding: 20px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    text-align: justify;
+    transition: 0.6s;
+  }
+  
+  .kartu1{
+    background-image: url(https://pptik.itb.ac.id/wp-content/uploads/sites/119/2017/08/WhatsApp-Image-2017-08-05-at-07.27.19-160x160.jpeg);
+    background-size: cover;
+  }
+  
+  .kartu1:hover{
+    transform: scale(1.05);
+  }
+  
+  .kartu2 {
+    background-image: url(https://pptik.itb.ac.id/wp-content/uploads/sites/119/2017/08/WhatsApp-Image-2017-08-05-at-07.27.22-160x160.jpeg);
+    background-size: cover;
+  }
+  
+  .kartu2:hover {
+    transform: scale(1.05);
+  }
+  
+  .kartu3 {
+    background-image: url(https://pptik.itb.ac.id/wp-content/uploads/sites/119/2017/08/WhatsApp-Image-2017-08-10-at-09.53.44-160x160.jpeg);
+    background-size: cover;
+  }
+  
+  .kartu3:hover {
+    transform: scale(1.05);
+  }
+  
+  .kartu4 {
+    background-image: url(https://pptik.itb.ac.id/wp-content/uploads/sites/119/2017/08/WhatsApp-Image-2017-08-28-at-17.47.24-160x160.jpeg);
+    background-size: cover;
+  }
+
+  .kartu4:hover {
+    transform: scale(1.05);
+  }
+
+  /* since nested groupes are not supported we have to use 
+     regular css for the nested dropdowns 
+  */
+  li>ul                 { transform: translatex(100%) scale(0) }
+  li:hover>ul           { transform: translatex(101%) scale(1) }
+  li > button svg       { transform: rotate(-90deg) }
+  li:hover > button svg { transform: rotate(-270deg) }
+
+  /* Below styles fake what can be achieved with the tailwind config
+     you need to add the group-hover variant to scale and define your custom
+     min width style.
+  	 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
+  	 for implementation with config file
+  */
+  .group:hover .group-hover\:scale-100 { transform: scale(1) }
+  .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+  .scale-0 { transform: scale(0) }
+  .min-w-32 { min-width: 8rem }
